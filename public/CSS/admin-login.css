@@ -1,0 +1,115 @@
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+/* BODY */
+body {
+    background: #fafaf9;
+    color: #1f2933;
+    font-family: 'IBM Plex Mono', monospace;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CONTAINER */
+.box {
+    width: 360px;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-top: 3px solid #16a085;
+    border-radius: 10px;
+    padding: 36px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+/* LOGO */
+.logo {
+    text-align: center;
+    margin-bottom: 28px;
+}
+.logo img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+.logo .bn {
+    font-family: 'Noto Sans Bengali';
+    color: #16a085;
+    font-size: 22px;
+    font-weight: 700;
+}
+.logo .sub {
+    font-size: 9px;
+    color: rgba(31,41,51,0.5);
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+/* LABEL */
+.label {
+    font-size: 9px;
+    color: rgba(31,41,51,0.6);
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(0,0,0,0.08);
+    color: #1f2933;
+    padding: 10px 12px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 16px;
+    transition: all 0.2s;
+}
+input:focus {
+    border-color: #16a085;
+    box-shadow: 0 0 0 2px rgba(22,160,133,0.1);
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 11px;
+    background: #16a085;
+    border: none;
+    color: #000;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+button:hover {
+    background: #138d75;
+    transform: translateY(-1px);
+}
+
+/* ERROR */
+.error {
+    background: rgba(231,76,60,0.1);
+    border: 1px solid rgba(231,76,60,0.3);
+    color: #e74c3c;
+    padding: 8px 12px;
+    font-size: 11px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+/* WARNING TEXT */
+.warn {
+    margin-top: 20px;
+    font-size: 10px;
+    color: rgba(31,41,51,0.5);
+    text-align: center;
+    line-height: 1.6;
+}

@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* THEME */
+:root {
+    --bg:      #fafaf9;
+    --bg2:     #c2d8d4;
+    --bg3:     #ffffff;
+
+    --border:  rgba(0,0,0,0.08);
+
+    --yellow:  #ffb800;
+    --green:   #27ae60;
+    --gold:    #f4c430;
+
+    /* TEXT (NO WHITE ANYWHERE) */
+    --text:    #1f2933;
+    --muted:   rgba(31,41,51,0.65);
+
+    --mono:    'IBM Plex Mono', monospace;
+    --bn:      'Noto Sans Bengali', sans-serif;
+
+    /* GLASS */
+    --glass-bg: rgba(255,255,255,0.65);
+    --glass-border: rgba(0,0,0,0.05);
+    --glass-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* BASE */
+html, body, #admin-root {
+    height: 100%;
+    width: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 13px;
+}
+
+/* FORCE TEXT COLORS */
+body, p, span, div, a, li, td, th, input, button {
+    color: var(--text);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 2px; }
+
+/* SIDEBAR / TOPBAR */
+.sidebar, .topbar, nav {
+    background: rgba(217,224,223,0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    color: var(--text);
+}
+
+/* CARDS */
+.card, .panel, .admin-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    box-shadow: var(--glass-shadow);
+    transition: all 0.25s ease;
+}
+
+.card:hover, .panel:hover, .admin-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* TABLE */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--glass-shadow);
+}
+.admin-table th {
+    padding: 8px 12px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    background: rgba(22,160,133,0.08);
+}
+.admin-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--border);
+}
+.admin-table tr:hover td {
+    background: rgba(0,0,0,0.03);
+}
+
+/* BADGES */
+.badge {
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 10px;
+}
+.badge-red    { background: rgba(231,76,60,0.1); color: #e74c3c; }
+.badge-yellow { background: rgba(255,184,0,0.15); color: #d68910; }
+.badge-green  { background: rgba(39,174,96,0.15); color: #27ae60; }
+.badge-muted  { background: rgba(0,0,0,0.05); color: var(--muted); }
+.badge-gold   { background: rgba(244,196,48,0.2); color: #b7950b; }
+
+/* BUTTONS */
+.btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-family: var(--mono);
+    font-size: 11px;
+    cursor: pointer;
+    border: none; /* FIXED */
+    transition: all 0.2s ease;
+}
+
+/* PRIMARY */
+.btn-primary {
+    background: #16a085 !important;
+    color: #000 !important;
+}
+.btn-primary:hover {
+    background: #138d75 !important;
+}
+
+/* LOGOUT */
+.btn-logout {
+    background: #27ae60 !important;
+    color: #27ae60 !important;
+}
+.btn-logout:hover {
+    background: #16532f !important;
+}
+
+/* GHOST */
+.btn-ghost {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+}
+.btn-ghost:hover {
+    color: var(--text);
+}
+
+/* INPUT */
+.admin-input {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    border-radius: 6px;
+    width: 100%;
+}
+.admin-input:focus {
+    border-color: #16a085;
+    box-shadow: 0 0 0 2px rgba(22,160,133,0.1);
+}
+
+/* REMOVE ANY WHITE TEXT */
+[style*="color: white"],
+[style*="color:#fff"] {
+    color: var(--text) !important;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+    animation: fadeIn 0.2s ease forwards;
+}
